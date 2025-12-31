@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahauddin Sajid</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --card:rgba(20,20,28,.85);
+  --text:#fff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type:y mandatory;
+}
+
+body{
+  color:var(--text);
+  background:#000;
+  overflow-y:scroll;
+}
+
+/* ===== 3D CANVAS ===== */
+canvas{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+}
+
+/* ===== SECTION ===== */
+section{
+  min-height:100vh;
+  scroll-snap-align:start;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+
+/* ===== CARD ===== */
+.card{
+  max-width:420px;
+  width:100%;
+  background:var(--card);
+  backdrop-filter:blur(18px);
+  border-radius:28px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 40px 80px rgba(0,0,0,.6);
+  animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(70px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ===== PROFILE ===== */
+.profile img{
+  width:135px;
+  height:135px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #00f2ff;
+  box-shadow:0 0 35px #00f2ff;
+  margin-bottom:15px;
+}
+
+h1{
+  font-size:26px;
+  font-weight:700;
+}
+
+.bio{
+  font-size:14px;
+  opacity:.9;
+  margin:12px 0 20px;
+  line-height:1.6;
+}
+
+/* ===== SOCIALS ===== */
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.socials a{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:22px;
+  transition:.4s;
+}
+
+.socials a:hover{
+  transform:scale(1.18) translateY(-6px);
+}
+
+.fb{background:#1877f2}
+.ig{background:radial-gradient(circle at 30% 110%,#fdf497,#fd5949,#d6249f,#285AEB)}
+.sc{background:#fffc00;color:#000}
+.wa{background:#25D366}
+
+/* ===== GALLERY ===== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:14px;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.12);
+  box-shadow:0 0 20px rgba(0,242,255,.6);
+}
+</style>
+</head>
+
+<body>
+
+<!-- 3D BACKGROUND -->
+<canvas id="bg"></canvas>
+
+<!-- PROFILE -->
+<section>
+  <div class="card">
+    <div class="profile">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4495hzw8t/IMG_do3ts6.jpg">
+    </div>
+    <h1>Bahauddin Sajid</h1>
+    <div class="bio">
+      و اصبروا إن الله مع الصابرين<br>
+      🏵️ صابر 💮 شكر 🌼 توكل
+    </div>
+    <div class="socials">
+      <a class="fb" href="https://www.facebook.com/share/14TLM71Xqb5/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="ig" href="https://www.instagram.com/the__sjd?igsh=ejV3enJzdG96a3pw" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a class="sc" href="https://www.snapchat.com/add/ruthless.mind?share_id=GpwO1fnY54g&locale=en-US" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
+      <a class="wa" href="https://wa.me/8801834922000" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <div class="card">
+    <h1>Gallery</h1><br>
+    <div class="gallery">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/1.jpg">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/2.jpg">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/3.jpg">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/4.jpg">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/5.jpg">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/6.jpg">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/7.jpg">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/8.jpg">
+      <img src="https://uploads.onecompiler.io/4495j76k2/4498kdxjr/9.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3D PARTICLE SCRIPT ===== -->
+<script>
+const canvas=document.getElementById("bg");
+const ctx=canvas.getContext("2d");
+
+function resize(){
+  canvas.width=innerWidth;
+  canvas.height=innerHeight;
+}
+resize();
+addEventListener("resize",resize);
+
+let particles=[];
+for(let i=0;i<120;i++){
+  particles.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    z:Math.random()*canvas.width,
+    r:Math.random()*2+1
+  });
+}
+
+function animate(){
+  ctx.fillStyle="rgba(0,0,0,.2)";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach(p=>{
+    p.z-=2;
+    if(p.z<=0){
+      p.z=canvas.width;
+      p.x=Math.random()*canvas.width;
+      p.y=Math.random()*canvas.height;
+    }
+    const sx=(p.x-canvas.width/2)*(canvas.width/p.z)+canvas.width/2;
+    const sy=(p.y-canvas.height/2)*(canvas.width/p.z)+canvas.height/2;
+    const size=(canvas.width/p.z)*p.r;
+
+    ctx.beginPath();
+    ctx.arc(sx,sy,size,0,Math.PI*2);
+    ctx.fillStyle="#00f2ff";
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
